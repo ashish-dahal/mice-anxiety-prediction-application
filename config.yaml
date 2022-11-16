@@ -1,0 +1,24 @@
+experiments:
+  EPM:
+    arena_length: 35
+  OF:
+    arena_length: 45
+    velocity_threshold: 53
+  SI:
+    arena_length: 45
+    proximity: 5
+  YM:
+    arena_length: 30
+pipeline:
+  classification:
+    allowed_experiments:
+      - OF
+      - EPM
+    models_folder: "data/classification/models/"
+  pose_estimation:
+    bin_length: 60
+    converted_videos_folder: "data/pose_estimation/converted_videos/"
+    h5_files_folder: "data/pose_estimation/h5_files/"
+    models_folder: "data/pose_estimation/models/"
+    slp_files_folder: "data/pose_estimation/slp_files/"
+#    video_threshold: 1
